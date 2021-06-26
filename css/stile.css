@@ -62,7 +62,7 @@ body {
     background-color: rgb(31, 23, 23);
     width: 100%;
     flex: 1 1 auto;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
     display: flex;
@@ -107,7 +107,7 @@ body {
 .content__body {
     color: rgb(51, 49, 49);
     text-align: center;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 30px 20px;
     background-color: rgb(197, 196, 196);
@@ -191,8 +191,42 @@ body {
     border: 1px solid black;
 }
 /* SLIDER______________________________________________ */
+/* SLIDER22222______________________________________________ */
+.slider2 .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+}
+.slider2 .slick-arrow.slick-prev {
+    left: 0;
+}
+.slider2 .slick-arrow.slick-next {
+    right: 0;
+}
 
-/* @media (min-width:900px){ */
+.slider2 .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider2 .slick-dots li {
+    list-style: none;
+    margin: 10px 10px;
+}
+.slider2 .slick-dots button {
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+.slider2 .slick-dots li.slick-active button {
+    background-color: transparent;
+    border: 1px solid black;
+}
+/* SLIDER22222______________________________________________ */
+
 .services__title {
     text-align: center;
     margin: 50px 0;
@@ -208,7 +242,7 @@ body {
 .services__card {
     padding: 0px 10px;
     display: flex;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 35px;
     justify-content: space-between;
@@ -253,24 +287,35 @@ body {
 }
 
 .footer__body {
-    max-width: 1000px;
-    margin: 0 auto;
     margin-top: 25px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     color: rgb(165, 160, 160);
     letter-spacing: 2px;
     transition: all 1s;
 }
+.footer__body span{
+    text-align: center;
+    font-size: 50px;
+    color: rgb(143, 112, 34);
+    margin-bottom: 40px;
+}
+
 .footer__content {
-    margin-left: 50px;
-    text-align: left;
+    display: flex;
+    justify-content: center;
+    
+    
 }
 
 .footer__body li {
+    margin: 0 50px 50px 0;
     color: rgb(196, 155, 53);
-    padding: 10px;
 }
+.footer__body li:last-child{
+    margin: 0;
+}
+
 .footer__body .icon {
     transition: all 0.5s;
 }
@@ -289,4 +334,101 @@ body {
     height: 25px;
     max-width: 30px;
     fill: rgb(196, 155, 53);
+    
 }
+@media(min-width:1200px){
+    .slider2{
+        display: none;
+    }
+    
+}
+
+@media(max-width:1200px){
+    .slider{
+        display: none;
+    }
+    .services__card{max-width:970px}
+    .content__body{max-width:970px}
+    .fullscreen__body{max-width:970px}
+}
+@media(max-width:992px){
+    .services__card{max-width:750px}
+    .content__body{max-width:750px}
+    .fullscreen__body{max-width:750px}
+    .services__card{
+        max-width:none
+        flex-wrap:wrap;
+        flex-direction: column;
+        align-items: center;        
+    }
+    .services__1{
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    .services__1:last-child{
+        margin-left: -30px;
+    }
+}
+@media(max-width:767px){
+    .fullscreen__body{
+        max-width:none
+    }
+    .content__body{
+        max-width:none
+    }
+    
+    .footer__content{
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer__content li{
+        margin: 10px 0;
+    }
+    .footer__content li:last-child{
+        margin: 10px 0;
+    }
+ /*    .header__burger{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+    }
+    .header__burger::before,
+    .header__burger::after{
+    content: "";
+    background-color: rgb(245, 9, 9);
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    }
+    .header__burger::before{
+        top: 0;
+    }
+    .header__burger::after{
+        bottom: 0;
+    }
+    .header__burger span{
+        position: absolute;
+        background-color: red;
+        
+        left: 0;
+        width: 100%;    
+        height: 2px;
+        top: 9px;
+    }
+
+    .menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    } */
+}
+/* .header__burger{
+    display: none;
+}
+.menu{
+
+} */
